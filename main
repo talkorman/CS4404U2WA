@@ -1,0 +1,11 @@
+val firstNames: Array<String> = arrayOf("James", "Joseph", "Art", "Len", "Don", "Sima", "Mitsue", "Leo",
+            "Sage", "Krish", "Minna", "Abe", "kyle", "Graciela", "Cammi", "Matt", "Mel", "Glady", "Yukee")
+    val lastNames: Array<String> = arrayOf("Bhatt", "Darakjy", "Veere", "Paprocki", "Foller", "Morasca", "Toll",
+            "Dilli", "weizer", "Marrier", "Amigo", "Maclead", "Caldarera", "Roota", "Albares", "Poquette",
+            "Garufi", "Rim", "Whobrey")
+    fun main(){
+        val fullNames: Array<String> = emptyArray()
+        var i = 0
+        for(name in firstNames)
+            fullNames[i] = name + " " + lastNames[i++]
+    }
