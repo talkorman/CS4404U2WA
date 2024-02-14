@@ -1,11 +1,27 @@
-val firstNames: Array<String> = arrayOf("James", "Joseph", "Art", "Len", "Don", "Sima", "Mitsue", "Leo",
-            "Sage", "Krish", "Minna", "Abe", "kyle", "Graciela", "Cammi", "Matt", "Mel", "Glady", "Yukee")
-    val lastNames: Array<String> = arrayOf("Bhatt", "Darakjy", "Veere", "Paprocki", "Foller", "Morasca", "Toll",
-            "Dilli", "weizer", "Marrier", "Amigo", "Maclead", "Caldarera", "Roota", "Albares", "Poquette",
-            "Garufi", "Rim", "Whobrey")
-    fun main(){
-        val fullNames: Array<String> = emptyArray()
-        var i = 0
-        for(name in firstNames)
-            fullNames[i] = name + " " + lastNames[i++]
+
+//Constant variables declaration and initiation
+val firstNames: ArrayList<String> = arrayListOf("James", "Joseph", "Art", "Len", "Don", "Sima", "Mitsue",
+    "Leo", "Sage", "Krish", "Minna", "Abe", "kyle", "Graciela", "Cammi", "Matt", "Mel", "Glady", "Yukee")
+val lastNames: ArrayList<String> = arrayListOf("Bhatt", "Darakjy", "Veere", "Paprocki", "Foller", "Morasca",
+    "Toll", "Dilli", "weizer", "Marrier", "Amigo", "Maclead", "Caldarera", "Roota", "Albares", "Poquette",
+    "Garufi", "Rim", "Whobrey")
+
+//Non constant variable declaration
+    var fullNames: ArrayList<String> = arrayListOf()
+
+//Inserting two array elements to a third array
+    var i = 0
+    for(name in firstNames) {
+        fullNames.add(firstNames.get(i) + " " + lastNames.get(i))
+        i++
+    }
+//Printing the result
+    i = 0
+var line = String.format("%-15s %-15s %-15s", "First name", "Last name", "Full name")
+println(line)
+println()
+    for(name in fullNames) {
+        line = String.format("%-15s %-15s %-15s", firstNames.get(i), lastNames.get(i), name)
+        println(line)
+        i++
     }
